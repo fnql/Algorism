@@ -1,9 +1,17 @@
 #include <time.h>
+#include <iostream>
 
-int main(void) {
-	clock_t start = clock();
+using namespace std;
 
-	clock_t end = clock();
-	printf("Time: %.0lf\n", (double)(end - start) / CLOCKS_PER_SEC);
+int main(void)
+{
+	clock_t startTime = clock();
+
+	// 시간 측정할 수행 코드
+
+	clock_t endTime = clock();
+
+	cout << "Time: " << (double)((endTime - startTime) / CLOCKS_PER_SEC) << "s(" << endTime - startTime << "ms)" << "\n";
+
 	return 0;
 }
